@@ -1,11 +1,11 @@
 name: nodebot
-description: A simple node.js starter bot for Beep Boop
+description: A simple node.js starter bot for Seeby
 avatar: resources/avatar.png
 #background: resources/background.png
 #config:
 #  - name: OPTION
-#    friendly_name: Some Unnecessary Option
-#    info: This is an unnecessary option
+#    friendly_name: Seeby
+#    info: Your startup assistant
 #    default: the default value
 #  - name: SECRET
 #    friendly_name: Shhhh
