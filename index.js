@@ -95,6 +95,31 @@ askWhereDeliver = function(response, convo) {
 }
 
 
+/*==============================================
+=            Testing Outgoing Hooks            =
+==============================================*/
+
+controller.setupWebserver(port,function(err,express_webserver) {
+  controller.createWebhookEndpoints(express_webserver)
+});
+
+controller.on('slash_command',function(bot,message) {
+
+    // reply to slash command
+    bot.replyPublic(message,'Everyone can see this part of the slash command');
+    bot.replyPrivate(message,'Only the person who used the slash command can see this.');
+
+})
+
+controller.on('outgoing_webhook',function(bot,message) {
+
+    // reply to outgoing webhook command
+    bot.replyPublic(message,'Everyone can see the results of this webhook command');
+
+})
+
+
+
 /*=============================================
 =            Catch everything else            =
 =============================================*/
