@@ -63,15 +63,15 @@ controller.hears(['attachment'], ['direct_message', 'direct_mention'], function 
   })
 })
 
-controller.hears('.*', ['direct_message', 'direct_mention'], function (bot, message) {
-  bot.reply(message, 'Sorry <@' + message.user + '>, I don\'t understand. \n')
-})
+// controller.hears('.*', ['direct_message', 'direct_mention'], function (bot, message) {
+//   bot.reply(message, 'Sorry <@' + message.user + '>, I don\'t understand. \n')
+// })
 
 /*====================================
 =            Conversation            =
 ====================================*/
 
-controller.hears(['pizzatime'],['ambient'],function(bot,message) {
+controller.hears(['pizzatime'],['direct_message', 'direct_message'],function(bot,message) {
   bot.startConversation(message, askFlavor);
 });
 
